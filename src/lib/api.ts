@@ -27,6 +27,7 @@ export interface PrinterJob {
   time_used: number;
   time_left: number;
   time_approx: number | null;
+  previewed_model_url: string | null;
 }
 
 export interface PrinterState {
@@ -73,7 +74,7 @@ export async function createPrinter(
 
 export function usePrinterState(printerName: string) {
   const { data, error, isLoading } = useSWR(
-    `/api/v1/printer/${printerName}/state`,
+    `/api/v1/printers/opcua/${printerName}/status`,
     getFetcher<PrinterState>,
     { refreshInterval: 5000 },
   );
@@ -82,9 +83,7 @@ export function usePrinterState(printerName: string) {
     data.isPrinting = data.state === 'printing';
     data.isReady = data.state === 'ready';
     data.isError = data.state === 'error';
-    data.thumbnail_url = data.isPrinting
-      ? `${import.meta.env.VITE_PRINTER_SERVER_URL}/api/v1/printer/${printerName}/job/thumbnail`
-      : null;
+    data.thumbnail_url = data?.job?.previewed_model_url;
   }
 
   return {

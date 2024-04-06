@@ -27,9 +27,10 @@ sudo docker run -d --name mes-printing-service \
 
 ## Tech Stack
 
-- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/) + [React](https://react.dev/)
 - [tailwindcss](https://tailwindcss.com/)
 - [shadcn/ui](https://ui.shadcn.com/)
 - [TanStack Router](https://tanstack.com/router/latest)
 - [SWR](https://swr.vercel.app/)
 - [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction)
+- [Husky](https://typicode.github.io/husky/) + [Prettier](https://prettier.io/)
