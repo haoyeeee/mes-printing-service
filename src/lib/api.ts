@@ -15,6 +15,7 @@ export interface Printer {
   api: PrinterApi;
   is_active: boolean;
 }
+
 export interface PrinterTemperature {
   actual: number;
   target: number;
@@ -84,6 +85,10 @@ export function usePrinterState(printerName: string) {
     data.isReady = data.state === 'ready';
     data.isError = data.state === 'error';
     data.thumbnail_url = data?.job?.previewed_model_url;
+
+    if (data.camera_url) {
+      data.camera_url = `${import.meta.env.VITE_PRINTER_SERVER_URL}/api/v1/printers/opcua/${data.name}/camera`;
+    }
   }
 
   return {
