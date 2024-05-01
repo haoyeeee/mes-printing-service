@@ -87,7 +87,7 @@ export function usePrinterState(printerName: string) {
     data.thumbnail_url = data?.job?.previewed_model_url;
 
     if (data.camera_url) {
-      data.camera_url = `${import.meta.env.VITE_PRINTER_SERVER_URL}/api/v1/printers/opcua/${data.name}/camera`;
+      data.camera_url = `${import.meta.env.VITE_PRINTER_SERVER_URL}/api/v1/printers/opcua/${data.name}/camera/snapshot`;
     }
   }
 
