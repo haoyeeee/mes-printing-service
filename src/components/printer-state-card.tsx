@@ -122,7 +122,7 @@ function PrinterCamera({
       <TimedImage
         src={state.camera_url}
         alt={`camera of ${state.name}`}
-        interval={1000}
+        interval={import.meta.VITE_PRINTER_CAMERA_SNAPSHOT_INTERVAL}
       />
     );
   } else {
