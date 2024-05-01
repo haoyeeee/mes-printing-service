@@ -8,6 +8,7 @@ import {
 import { cn } from '@/lib/utils.ts';
 import dayjs from 'dayjs';
 import React, { useState } from 'react';
+import { TimedImage } from 'react-timed-image';
 
 interface TempThreshold {
   yellow: number;
@@ -117,7 +118,13 @@ function PrinterCamera({
   }
 
   if (!state.isPrinting || !state.thumbnail_url || showCamera) {
-    return <img src={state.camera_url} alt={`camera of ${state.name}`} />;
+    return (
+      <TimedImage
+        src={state.camera_url}
+        alt={`camera of ${state.name}`}
+        interval={1000}
+      />
+    );
   } else {
     return (
       <img src={state.thumbnail_url} alt={`job thumbnail of ${state.name}`} />
