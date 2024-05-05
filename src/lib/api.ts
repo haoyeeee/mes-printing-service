@@ -110,3 +110,32 @@ export function usePrinters() {
     error,
   };
 }
+
+
+
+
+// For testing. Should be replaced. 
+export interface Filament {
+  id: string;
+  supplier: string;
+  material: string;
+  colour: string;
+  netMaterial: number;
+  barcode: string;
+  allocatedTo: string;
+  openedBy: string;
+  openedOn: string;
+  weight: number;
+  product?: number;
+  waste?: number;
+  total?: number;
+}
+
+export const filamentData = [
+  { id: '001', supplier: 'Fashion 3D', material: 'PLA+', colour: 'Blue', netMaterial: 1000, barcode: '6102081', allocatedTo: 'MA (Warman Sri)', openedBy: 'Sri', openedOn: '07/04/2024 12:50:55', weight: 1112 },
+  { id: '002', supplier: 'Fashion 3D', material: 'PLA+', colour: 'Purple', netMaterial: 1000, barcode: '18102091', allocatedTo: 'MA (Warman Marcus)', openedBy: 'Marcus', openedOn: '06/04/2024 13:01:14', weight: 1129 },
+  { id: '003', supplier: 'Fashion 3D', material: 'PLA+', colour: 'Purple', netMaterial: 1000, barcode: '18102091', allocatedTo: 'MA (Warman Marcus)', openedBy: 'Marcus', openedOn: '06/04/2024 13:08:44', weight: 1117 },
+  { id: '004', supplier: 'Fashion 3D', material: 'PLA+', colour: 'Purple', netMaterial: 1000, barcode: '18102091', allocatedTo: 'MA (Warman Marcus)', openedBy: 'Marcus', openedOn: '06/04/2024 14:37:40', weight: 1128 },
+  { id: '005', supplier: 'Fashion 3D', material: 'PLA+', colour: 'Orange', netMaterial: 1000, barcode: '6102041', allocatedTo: 'Yevan/Billy', openedBy: 'Yevan/Billy', openedOn: '17/04/2024 11:36:48', weight: 1113 },
+  { id: '006', supplier: 'Fashion 3D', material: 'PLA+', colour: 'White', netMaterial: 1000, barcode: '1510202A', allocatedTo: 'Manu', openedBy: 'Manu', openedOn: '11/04/2024 19:50:40', weight: 1125, product: 54, waste: 5.5, total: 59.5 }
+];
