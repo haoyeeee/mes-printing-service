@@ -22,6 +22,7 @@ sudo docker run -d --name mes-printing-service \
  -e VITE_AUTH0_DOMAIN=<auth0-domain> \
  -e VITE_AUTH0_CLIENT_ID=<auth0-client-id> \
  -e VITE_AUTH0_AUDIENCE=https://<auth0-domain>/api/v2/ \
+ -e VITE_PRINTER_CAMERA_SNAPSHOT_INTERVAL=3000 \
   mes-printing-service
 ```
 

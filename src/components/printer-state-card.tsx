@@ -149,7 +149,7 @@ export default function PrinterStateCard({
   }
   return (
     <Card
-      className="p-6 dark:bg-slate-900"
+      className="bg-gray-100 p-6 dark:bg-slate-900"
       onClick={() => setShowCamera((state) => !state)}
     >
       <CardHeader className="flex-row content-center items-center justify-between p-0 text-xl font-bold capitalize md:text-2xl">
