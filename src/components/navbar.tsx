@@ -39,18 +39,18 @@ export default function Navbar() {
         >
           Dashboard
         </Link>
-        {/*<Link*/}
-        {/*  to="/job"*/}
-        {/*  className="text-gray-400 transition-colors hover:text-foreground [&.active]:text-foreground"*/}
-        {/*>*/}
-        {/*  Jobs*/}
-        {/*</Link>*/}
-        {/*<Link*/}
-        {/*  to="/filament"*/}
-        {/*  className="text-gray-400 transition-colors hover:text-foreground [&.active]:text-foreground"*/}
-        {/*>*/}
-        {/*  Filaments*/}
-        {/*</Link>*/}
+        <Link
+         to="/job"
+         className="text-gray-400 transition-colors hover:text-foreground [&.active]:text-foreground"
+        >
+         Jobs
+        </Link>
+        {/* <Link
+         to="/filament"
+         className="text-gray-400 transition-colors hover:text-foreground [&.active]:text-foreground"
+        >
+         Filaments
+        </Link> */}
       </nav>
       <Sheet>
         <SheetTrigger asChild>
